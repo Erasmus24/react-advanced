@@ -55,6 +55,7 @@ const Header = () => {
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
+      zIndex={1100}
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
@@ -66,8 +67,8 @@ const Header = () => {
           <nav>
             <HStack spacing={4}>
               {socials.map((social, index) => (
-                <Link key={index} href={social.url} isExternal>
-                  <FontAwesomeIcon icon={social.icon} size="lg" />
+                <Link key={index} href={social.url} isExternal target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={social.icon} size="2x" />
                 </Link>
               ))}
             </HStack>
@@ -75,8 +76,8 @@ const Header = () => {
           <nav>
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
-              <Link href="#project">Projects</Link>
-              <Link href="#contact">Contact Me</Link>
+              <Link href="#project" onClick={handleClick("project")}>Projects</Link>
+              <Link href="#contact" onClick={handleClick("contact")}>Contact Me</Link>
             </HStack>
           </nav>
         </HStack>

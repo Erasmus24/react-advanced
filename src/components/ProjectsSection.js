@@ -1,7 +1,7 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
 import { Box, Heading } from "@chakra-ui/react";
-import Card from "./Card";
+import Card from "./CardComponent";
 
 const projects = [
   {
@@ -40,7 +40,7 @@ const ProjectsSection = () => {
       alignItems="flex-start"
       spacing={8}
     >
-      <Heading as="h1" id="projects-section">
+      <Heading as="h1" id="projects-section" fontSize="2xl">
         Featured Projects
       </Heading>
       <Box
